@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           <div>
             <span className="text-gray-200 font-bold block text-xs">Dipesh Dhakal</span>
             <span className="text-[10px] text-gray-500">
-              © {new Date().getFullYear()} Dipesh Dhakal. All Rights Reserved.
+              © 2020 Dipesh Dhakal. All Rights Reserved.
             </span>
           </div>
         </div>
