@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dipesh Dhakal — Cybersecurity Specialist | Web Developer | UI/UX Designer | Data Analyst</title>
+  <meta name="description" content="Portfolio of Dipesh Dhakal — cybersecurity researcher, web developer, UI/UX designer, and data analyst based in Kathmandu, Nepal." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Mobile / Tablet Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <a href="#home" class="brand">Dipesh Dhakal</a>
+    <nav class="nav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#certificates" class="nav-link">Certificates</a>
+      <a href="#github" class="nav-link">GitHub</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="sidebar-socials" id="sidebar-socials"></div>
+    <button class="btn-sidebar" id="open-terminal">Terminal CLI <span class="kbd">&#8984;K</span></button>
+    <button class="btn-sidebar" id="open-resume">Download CV</button>
+  </aside>
+
+  <!-- Desktop Navbar -->
+  <header class="navbar">
+    <nav class="navbar-nav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#certificates" class="nav-link">Certificates</a>
+      <a href="#github" class="nav-link">GitHub</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main class="content">
+
+    <!-- HERO -->
+    <section id="home" class="section hero">
+      <div class="container">
+        <div class="hero-topbar">
+          <span class="badge">
+            <span class="icon-shield"></span> Cybersecurity &amp; Technology
+            <span class="dot"></span>
+          </span>
+          <button class="terminal-btn" id="terminal-btn-top">Terminal CLI <span class="kbd">&#8984;K</span></button>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-text">
+            <div class="hero-intro">
+              <span class="tagline">Security &bull; Development &bull; Design &bull; Data</span>
+              <h1>Hello, I'm <span>Dipesh Dhakal</span></h1>
+              <p class="role-line"><span class="role-prefix">role&gt;</span> <span id="rotating-role" class="role-text"></span><span class="cursor">|</span></p>
+              <p class="location"><span class="pin"></span> Kathmandu, 22 Kthamandu, Nepal</p>
+            </div>
+            <p class="hero-bio">Develops secure web applications, custom Python security tools, and vulnerability assessments. Currently completing a BSc (Hons) in Ethical Hacking &amp; Cyber Security at Coventry University.</p>
+            <div class="cta-row">
+              <button class="btn-primary" id="view-projects">View Projects <span class="arrow">&rarr;</span></button>
+              <button class="btn-secondary" id="get-in-touch">Get in Touch</button>
+            </div>
+          </div>
+
+          <div class="hero-photo">
+            <div class="photo-frame">
+              <img src="images/profile-photo.jpg" alt="Dipesh Dhakal" />
+            </div>
+          </div>
+        </div>
+
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-tag">WHO I AM</span>
+          <h2>About <span class="grad">Me</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Background</h3>
+            <p id="about-bio"></p>
+            <div id="about-paragraphs"></div>
+          </div>
+          <div class="caps" id="caps"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-tag">TECHNICAL SKILLS &amp; COMPETENCIES</span>
+          <h2>Skills &amp; <span class="grad">Tools</span></h2>
+        </div>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-tag">SELECTED WORK &amp; CODE</span>
+          <h2>Featured <span class="grad">Projects</span></h2>
+        </div>
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-tag">EDUCATION &amp; TRAINING</span>
+          <h2>Education &amp; <span class="grad">Credentials</span></h2>
+        </div>
+        <div class="edu-grid" id="edu-grid"></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-tag">PROFESSIONAL EXPERIENCE</span>
+          <h2>Experience <span class="grad">Timeline</span></h2>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="section">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-tag">CERTIFICATIONS &amp; TRAINING</span>
+          <h2>Certificates &amp; <span class="grad">Awards</span></h2>
+        </div>
+        <div class="cert-grid" id="cert-grid"></div>
+      </div>
+    </section>
+
+    <!-- GITHUB -->
+    <section id="github" class="section">
+      <div class="container">
+        <div class="gh-card">
+          <div class="gh-banner">
+            <img src="images/github-banner.jpg" alt="GitHub" />
+            <div class="gh-banner-overlay">
+              <div class="gh-profile">
+                <img src="images/profile-photo.jpg" alt="Dipesh Dhakal" />
+                <div>
+                  <h3>@dipeshdhakal1522</h3>
+                  <p>Cybersecurity &amp; Open Source</p>
+                </div>
+              </div>
+              <a class="gh-follow" href="https://github.com/dipeshdhakal1522" target="_blank" rel="noopener">Follow</a>
+            </div>
+          </div>
+          <div class="gh-repos" id="gh-repos"></div>
+          <a class="gh-profile-btn" href="https://github.com/dipeshdhakal1522" target="_blank" rel="noopener">View Full GitHub Profile &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="sec-header center">
+          <span class="sec-tag">CONTACT</span>
+          <h2>Get In <span class="grad">Touch</span></h2>
+          <p>For project inquiries, security audits, or collaboration opportunities, send a message directly.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-card">
+              <h4>Contact Information</h4>
+              <p><strong>Email:</strong> <a href="mailto:dipeshrajdhakal@gmail.com" id="email-link">dipeshrajdhakal@gmail.com</a> <button class="copy-btn" id="copy-email">Copy</button></p>
+              <p><strong>Phone:</strong> <a href="tel:+9779851495988">+977 9851495988</a></p>
+              <p><strong>Location:</strong> Kathmandu, 22 Kthamandu, Nepal</p>
+            </div>
+            <div class="social-grid" id="social-grid"></div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" />
+                <span class="err" id="err-name"></span>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" />
+                <span class="err" id="err-email"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What is this about?" />
+              <span class="err" id="err-subject"></span>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message..."></textarea>
+              <span class="err" id="err-message"></span>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+            <p class="form-note" id="form-note"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>Dipesh Dhakal</strong> &mdash; &copy; 2026 Dipesh Dhakal. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Project Modal -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal">
+      <button class="modal-close" id="close-project">&times;</button>
+      <div class="modal-body" id="project-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Terminal Modal -->
+  <div class="modal-backdrop" id="terminal-modal">
+    <div class="modal terminal">
+      <div class="terminal-head">
+        <span>guest@dipesh-dhakal</span>
+        <button class="modal-close" id="close-terminal">&times;</button>
+      </div>
+      <div class="terminal-body" id="terminal-body"></div>
+      <div class="terminal-input-row">
+        <span class="prompt">guest@dipesh-dhakal:~$</span>
+        <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Modal -->
+  <div class="modal-backdrop" id="resume-modal">
+    <div class="modal resume">
+      <button class="modal-close" id="close-resume">&times;</button>
+      <div class="modal-body" id="resume-body"></div>
+    </div>
+  </div>
+
+  <!-- AI Chat Bot -->
+  <div id="chat-widget">
+    <div id="chat-panel" class="chat-panel">
+      <div class="chat-head">
+        <div class="chat-title">
+          <span class="chat-avatar">&#129302;</span>
+          <div>
+            <p class="chat-name">Enigma <span class="chat-spark">&#10024;</span></p>
+          </div>
+        </div>
+        <button class="chat-close" id="chat-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div class="chat-body" id="chat-body"></div>
+      <div class="chat-chips" id="chat-chips"></div>
+      <div class="chat-input-row">
+        <input type="text" id="chat-input" placeholder="Ask about Dipesh..." autocomplete="off" />
+        <button class="chat-send" id="chat-send" aria-label="Send">&#10148;</button>
+      </div>
+      <p class="chat-wa-hint">Prefer a direct chat? <a id="chat-wa-link" href="https://wa.me/dipeshdhakal1522" target="_blank" rel="noopener">Message on WhatsApp &rarr;</a></p>
+    </div>
+    <button class="chat-toggle" id="chat-toggle" aria-label="Toggle AI chat">&#129302;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

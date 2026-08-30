@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Roboto:wght@100;300;400&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #0a0a0f;
+    --purple: #0ea5e9;
+    --secondary: rgba(15, 23, 42, 0.6);
+    --accent: #df4a22;
+    --text: #f8fafc;
+    --blue: #3b82f6;
+    --white: #ffffff;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Force Dark Theme Overrides for hardcoded light classes */
+  .text-gray-900, .text-gray-800 { color: #f8fafc !important; }
+  .text-gray-700, .text-gray-600 { color: #cbd5e1 !important; }
+  .text-gray-500 { color: #94a3b8 !important; }
+  
+  .bg-white { background-color: transparent !important; }
+  .bg-gray-50, .bg-gray-100 { background-color: rgba(255, 255, 255, 0.05) !important; }
+  .border-gray-200 { border-color: rgba(255, 255, 255, 0.1) !important; }
+  .border-gray-100 { border-color: rgba(255, 255, 255, 0.05) !important; }
+}
+
+/* Custom Scrollbar matching target */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a38383;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aa1d1d;
+}
+
+/* Target site wobble animation */
+@keyframes morph {
+  0% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; }
+  100% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+}
+
+.wobble {
+  animation: morph 8s ease-in-out infinite;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #2d2e32;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  height: 22rem;
+  position: relative;
+  transition: all 1s ease-in-out;
+  width: 22rem;
+}
+
+/* Clean UI utility classes (replacing glassmorphism) */
+.clean-panel {
+  background: var(--secondary);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+}
+
+.clean-panel-hover {
+  transition: all 0.3s ease;
+}
+
+.clean-panel-hover:hover {
+  transform: translateY(-2px);
+  border-color: var(--purple);
+  box-shadow: 0 4px 20px -2px rgba(139, 92, 246, 0.2);
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

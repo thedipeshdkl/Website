@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/profile-photo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Dipesh Dhakal — Cybersecurity Specialist & Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Roboto:wght@100;300;400&family=Space+Grotesk:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="title" content="Dipesh Dhakal — Cybersecurity Specialist & Web Developer" />
+    <meta name="description" content="Portfolio of Dipesh Dhakal: Cybersecurity Specialist, Web Developer, UI/UX Designer, and Data Analyst based in Kathmandu, Nepal." />
+    <meta name="keywords" content="Dipesh Dhakal, Cybersecurity, Ethical Hacking, Web Development, SaanjhCyber, Penetration Testing, React, TypeScript, Nepal" />
+    <meta name="author" content="Dipesh Dhakal" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/dipeshdhakal1522" />
+    <meta property="og:title" content="Dipesh Dhakal — Cybersecurity Specialist & Web Developer" />
+    <meta property="og:description" content="Portfolio of Dipesh Dhakal: Cybersecurity Specialist, Web Developer, UI/UX Designer, and Data Analyst." />
+    <meta property="og:image" content="https://github.com/dipeshdhakal1522.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Dipesh Dhakal — Cybersecurity Specialist & Web Developer" />
+    <meta property="twitter:description" content="Portfolio of Dipesh Dhakal: Cybersecurity Specialist, Web Developer, UI/UX Designer, and Data Analyst." />
+    <style>
+      /* Cyber-themed preloader shown while React is loading */
+      #root:empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #0a0a0f;
+        font-family: 'Space Grotesk', monospace;
+      }
+      .cyber-loader {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .cyber-spinner {
+        width: 60px;
+        height: 60px;
+        border: 4px solid rgba(16, 185, 129, 0.1);
+        border-top-color: #10b981;
+        border-left-color: #06b6d4;
+        border-radius: 50%;
+        animation: cyber-spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+        margin-bottom: 20px;
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+      }
+      .cyber-text {
+        color: #10b981;
+        font-size: 14px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        animation: cyber-pulse 1.5s ease-in-out infinite;
+      }
+      @keyframes cyber-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes cyber-pulse {
+        0%, 100% { opacity: 1; text-shadow: 0 0 10px rgba(16, 185, 129, 0.5); }
+        50% { opacity: 0.4; text-shadow: none; }
+      }
+    </style>
+  </head>
+  <body class="bg-[#0a0a0f] text-stone-100 antialiased selection:bg-emerald-500 selection:text-stone-950">
+    <div id="root">
+      <div class="cyber-loader">
+        <div class="cyber-spinner"></div>
+        <div class="cyber-text">System Initializing...</div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
