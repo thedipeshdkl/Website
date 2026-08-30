@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lock } from 'lucide-react';
+
 
 export const Footer: React.FC = () => {
   return (
@@ -8,9 +8,6 @@ export const Footer: React.FC = () => {
         
         {/* Brand */}
         <div className="flex items-center gap-3 text-left mx-auto">
-          <div className="w-7 h-7 rounded-lg bg-[var(--secondary)] border border-emerald-500/40 flex items-center justify-center text-[var(--purple)]">
-            <Lock className="w-3.5 h-3.5" />
-          </div>
           <div>
             <span className="text-gray-200 font-bold block text-xs">Dipesh Dhakal</span>
             <span className="text-[10px] text-gray-500">
