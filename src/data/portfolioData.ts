@@ -304,7 +304,9 @@ export const EXPERIENCES: ExperienceItem[] = [
       "Worked with routing, enterprise networking protocols, and log analysis.",
       "Supported internal IT operations and equipment troubleshooting."
     ],
-    tags: ["Networking", "Network Security", "Telecom IT", "Log Analysis"]
+    tags: ["Networking", "Network Security", "Telecom IT", "Log Analysis"],
+    imagePath: "/nepal-telecom.png",
+    url: "https://www.ntc.net.np/"
   },
   {
     id: "decorum-tech",
