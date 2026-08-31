@@ -132,7 +132,7 @@ const DATA = {
   education: [
     {
       degree: 'BSc (Hons) Ethical Hacking and Cyber Security', institution: 'Coventry University',
-      duration: '2022 \u2013 May 2025', location: 'Kathmandu, Nepal / UK', badge: 'Undergraduate Degree',
+      duration: 'September 2023 - September 2026', location: 'Kathmandu, Nepal / UK', badge: 'Undergraduate Degree',
       image: 'images/coventry-university.jpg', url: 'https://www.coventry.ac.uk/',
       details: [
         'Specialized in Penetration Testing, Web Application Security, Digital Forensics, Cryptography, and System Hardening.',
@@ -141,13 +141,13 @@ const DATA = {
     },
     {
       degree: '+2 Science (Computer Science Focus)', institution: 'Gyankunj SS & College',
-      duration: 'Higher Secondary', location: 'Kathmandu, Nepal', badge: 'High School',
+      duration: '2018 - Jan 2020', location: 'Kathmandu, Nepal', badge: 'High School',
       image: 'images/gyankunj-college.jpg', url: 'https://gyankunjschool.edu.np/',
       details: ['Foundation in Mathematics, Physics, Chemistry, and Computer Science fundamentals.']
     },
     {
       degree: 'UI/UX Design & Digital Marketing Strategy', institution: 'Nitte Meenakshi Institute of Technology',
-      duration: 'Specialized Training', location: 'Bengaluru, India', badge: 'Specialization',
+      duration: 'Jan 2020 - August 2023', location: 'Bengaluru, India', badge: 'Specialization',
       image: 'images/nitte-nmit.jpg', url: 'https://nitte.edu.in/nmit/',
       details: ['Specialized training in UI/UX design and digital marketing strategy.']
     }
