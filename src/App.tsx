@@ -13,6 +13,7 @@ import { Footer } from './components/Footer';
 import { CyberTerminalModal } from './components/CyberTerminalModal';
 import { ResumeModal } from './components/ResumeModal';
 import { ChatBot } from './components/ChatBot';
+import { SecurityLabs } from './components/SecurityLabs';
 
 export function App() {
   const [activeSection, setActiveSection] = useState<string>('home');
@@ -25,6 +26,7 @@ export function App() {
       'home',
       'about',
       'projects',
+      'labs',
       'experience',
       'education',
       'blogs',
@@ -90,6 +92,8 @@ export function App() {
         <About />
 
         <Projects />
+
+        <SecurityLabs />
 
         <Skills />
 

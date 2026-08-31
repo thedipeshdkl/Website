@@ -19,6 +19,16 @@ export interface Project {
   iconName: string;
 }
 
+export interface SecurityLab {
+  id: string;
+  title: string;
+  type: 'CTF Write-up' | 'Tool' | 'Research' | 'Vulnerability';
+  platform: 'TryHackMe' | 'HackTheBox' | 'Independent' | 'GitHub';
+  description: string;
+  url?: string;
+  tags: string[];
+}
+
 export interface SkillCategory {
   id: string;
   title: string;
@@ -423,5 +433,35 @@ export const CERTIFICATES: CertificateItem[] = [
     issueDate: "2023",
     category: "Networking",
     verificationUrl: "https://github.com/thedipeshdkl"
+  }
+];
+
+export const SECURITY_LABS: SecurityLab[] = [
+  {
+    id: 'lab-1',
+    title: 'Active Directory Penetration Test Lab',
+    type: 'CTF Write-up',
+    platform: 'HackTheBox',
+    description: 'A comprehensive walkthrough on compromising a simulated Active Directory environment. Demonstrates AS-REP Roasting, Kerberoasting, and domain privilege escalation using BloodHound.',
+    url: '#',
+    tags: ['Active Directory', 'Privilege Escalation', 'BloodHound', 'Kerberos']
+  },
+  {
+    id: 'lab-2',
+    title: 'Custom Python Keylogger & Exfiltration',
+    type: 'Tool',
+    platform: 'GitHub',
+    description: 'Developed a proof-of-concept stealth keylogger in Python for educational purposes. Features keystroke capturing, process hiding, and secure exfiltration via an encrypted webhook.',
+    url: '#',
+    tags: ['Python', 'Malware Analysis', 'Offensive Security']
+  },
+  {
+    id: 'lab-3',
+    title: 'Web App Firewall (WAF) Bypass Analysis',
+    type: 'Research',
+    platform: 'Independent',
+    description: 'Research into modern WAF evasion techniques using encoding, obfuscation, and HTTP desync attacks. Includes a vulnerable test bed and mitigation strategies.',
+    url: '#',
+    tags: ['Web Security', 'WAF Bypass', 'HTTP Request Smuggling']
   }
 ];

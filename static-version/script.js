@@ -135,6 +135,35 @@ const DATA = {
       ]
     }
   ],
+  labs: [
+    {
+      id: 'lab-1',
+      title: 'Active Directory Penetration Test Lab',
+      type: 'CTF Write-up',
+      platform: 'HackTheBox',
+      description: 'A comprehensive walkthrough on compromising a simulated Active Directory environment. Demonstrates AS-REP Roasting, Kerberoasting, and domain privilege escalation using BloodHound.',
+      url: '#',
+      tags: ['Active Directory', 'Privilege Escalation', 'BloodHound', 'Kerberos']
+    },
+    {
+      id: 'lab-2',
+      title: 'Custom Python Keylogger & Exfiltration',
+      type: 'Tool',
+      platform: 'GitHub',
+      description: 'Developed a proof-of-concept stealth keylogger in Python for educational purposes. Features keystroke capturing, process hiding, and secure exfiltration via an encrypted webhook.',
+      url: '#',
+      tags: ['Python', 'Malware Analysis', 'Offensive Security']
+    },
+    {
+      id: 'lab-3',
+      title: 'Web App Firewall (WAF) Bypass Analysis',
+      type: 'Research',
+      platform: 'Independent',
+      description: 'Research into modern WAF evasion techniques using encoding, obfuscation, and HTTP desync attacks. Includes a vulnerable test bed and mitigation strategies.',
+      url: '#',
+      tags: ['Web Security', 'WAF Bypass', 'HTTP Request Smuggling']
+    }
+  ],
   education: [
     {
       degree: 'BSc (Hons) Ethical Hacking and Cyber Security', institution: 'Coventry University',
@@ -393,6 +422,44 @@ function renderProjects() {
   $('#projects-grid').innerHTML = html;
 }
 
+function renderLabs() {
+  const grid = $('#labs-grid');
+  if (!grid) return;
+  grid.innerHTML = DATA.labs.map(lab => {
+    let platClass = 'text-gray-400 bg-gray-800 border-gray-700';
+    if (lab.platform === 'HackTheBox') platClass = 'text-green-500 bg-green-500/10 border-green-500/30';
+    if (lab.platform === 'TryHackMe') platClass = 'text-red-500 bg-red-500/10 border-red-500/30';
+    if (lab.platform === 'GitHub') platClass = 'text-stone-300 bg-stone-700/30 border-stone-600/50';
+    if (lab.platform === 'Independent') platClass = 'text-purple-400 bg-purple-500/10 border-purple-500/30';
+
+    return `
+      <div class="lab-card group">
+        <div class="lab-header">
+          <div class="mac-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <div class="lab-filename">${lab.type.toLowerCase().replace(' ', '_')}.sh</div>
+        </div>
+        <div class="lab-body flex-grow">
+          <div class="lab-meta">
+            <span class="lab-platform ${platClass}">${lab.platform}</span>
+          </div>
+          <h3>${lab.title}</h3>
+          <p class="lab-desc">${lab.description}</p>
+          <div class="lab-footer mt-auto">
+            <div class="tags">
+              ${lab.tags.map(t => `<span class="tag tag-emerald">${t}</span>`).join('')}
+            </div>
+            ${lab.url && lab.url !== '#' ? `<a href="${lab.url}" target="_blank" rel="noopener" class="lab-link">View Details &rarr;</a>` : ''}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
 function renderEducation() {
   $('#edu-grid').innerHTML = DATA.education.map((e) =>
     '<div class="edu-card"><img src="' + e.image + '" alt="' + e.institution + '" />' +
@@ -449,6 +516,7 @@ renderStats();
 renderAbout();
 renderSkills();
 renderProjects();
+renderLabs();
 renderEducation();
 renderExperience();
 renderCertificates();

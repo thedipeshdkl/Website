@@ -24,6 +24,7 @@ export function Navbar({ activeSection }: NavbarProps) {
   const navLinks = [
     { id: 'home', label: 'Home' },
     { id: 'projects', label: 'Project' },
+    { id: 'labs', label: 'Labs' },
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'education', label: 'Education' },
