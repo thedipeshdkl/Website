@@ -78,7 +78,7 @@ const DATA = {
     {
       id: 'saanjhcyber', title: 'SaanjhCyber', subtitle: 'Cybercrime Reporting Platform',
       category: 'Cybersecurity', desc: 'Cybercrime reporting & awareness platform with case tracking, evidence upload & privacy controls.',
-      detail: 'SaanjhCyber is a final year capstone project developed in collaboration with Coventry University (May 2025). It provides a structured process for reporting cybercrime incidents, supports secure evidence uploads, tracks case progress via unique Case IDs, and maintains a searchable database of suspicious online entities.',
+      detail: 'SaanjhCyber is a final year capstone project developed in collaboration with Coventry University (September 2026). It provides a structured process for reporting cybercrime incidents, supports secure evidence uploads, tracks case progress via unique Case IDs, and maintains a searchable database of suspicious online entities.',
       tags: ['React', 'TypeScript', 'Vite', 'API'],
       github: 'https://github.com/dipeshdhakal1522/SaanjhCyber', live: null,
       image: 'images/saanjhcyber-dashboard.jpg',
@@ -480,7 +480,7 @@ function termCommand(cmd) {
     case 'saanjh':
     case 'saanjhcyber':
       termPrint('SaanjhCyber \u2014 Cybercrime Reporting Platform');
-      termPrint('Capstone project with Coventry University (May 2025).');
+      termPrint('Capstone project with Coventry University (September 2026).');
       termPrint('Case tracking, evidence upload, privacy controls, and a searchable entity database.');
       termPrint('https://github.com/dipeshdhakal1522/SaanjhCyber', 'ok');
       break;
@@ -497,7 +497,7 @@ function termCommand(cmd) {
     case 'update':
     case 'full update':
       termPrint('Profile status: UP TO DATE', 'ok');
-      termPrint('Latest: BSc (Hons) completed May 2025 \u2022 SaanjhCyber capstone shipped \u2022 New tools in development');
+      termPrint('Latest: BSc (Hons) completed September 2026 \u2022 SaanjhCyber capstone shipped \u2022 New tools in development');
       break;
     case 'hi':
     case 'hello':
@@ -683,7 +683,7 @@ const CHAT_KNOWLEDGE = [
   },
   {
     keywords: ['coventry', 'bsc', 'hons', 'ethical hacking'],
-    reply: 'Dipesh completed a BSc (Hons) in Ethical Hacking and Cyber Security at Coventry University (2022 \u2013 May 2025), specializing in penetration testing, web application security, digital forensics, cryptography, and system hardening.'
+    reply: 'Dipesh completed a BSc (Hons) in Ethical Hacking and Cyber Security at Coventry University (September 2023 - September 2026), specializing in penetration testing, web application security, digital forensics, cryptography, and system hardening.'
   },
   {
     keywords: ['experience', 'job', 'work history', 'career', 'intern', 'worked'],

@@ -201,7 +201,7 @@ export const PROJECTS: Project[] = [
     categoryLabel: "Cybersecurity Platform",
     isPrimaryFeatured: true,
     description: "Cybercrime reporting & awareness platform with case tracking, evidence upload & privacy controls.",
-    detailedDescription: "SaanjhCyber is a final year capstone project developed in collaboration with Coventry University (May 2025). It provides a structured process for reporting cybercrime incidents, supports secure evidence uploads, tracks case progress via unique Case IDs, and maintains a searchable database of suspicious online entities.",
+    detailedDescription: "SaanjhCyber is a final year capstone project developed in collaboration with Coventry University (September 2026). It provides a structured process for reporting cybercrime incidents, supports secure evidence uploads, tracks case progress via unique Case IDs, and maintains a searchable database of suspicious online entities.",
     techTags: ["React", "TypeScript", "Vite", "API"],
     githubUrl: "https://github.com/thedipeshdkl/SaanjhCyber",
     highlights: [

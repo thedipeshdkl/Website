@@ -63,7 +63,7 @@ const KNOWLEDGE: { keywords: string[]; reply: string }[] = [
   },
   {
     keywords: ['coventry', 'bsc', 'hons', 'ethical hacking'],
-    reply: 'Dipesh completed a BSc (Hons) in Ethical Hacking and Cyber Security at Coventry University (2022 \u2013 May 2025), specializing in penetration testing, web application security, digital forensics, cryptography, and system hardening.'
+    reply: 'Dipesh completed a BSc (Hons) in Ethical Hacking and Cyber Security at Coventry University (September 2023 - September 2026), specializing in penetration testing, web application security, digital forensics, cryptography, and system hardening.'
   },
   {
     keywords: ['experience', 'job', 'work history', 'career', 'intern', 'worked'],
