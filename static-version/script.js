@@ -140,7 +140,7 @@ const DATA = {
       ]
     },
     {
-      degree: '+2 Science (Computer Science Focus)', institution: 'Gyankunj SS & College',
+      degree: '+2 Science', institution: 'Gyankunj SS & College',
       duration: '2018 - Jan 2020', location: 'Kathmandu, Nepal', badge: 'High School',
       image: 'images/gyankunj-college.jpg', url: 'https://gyankunjschool.edu.np/',
       details: ['Foundation in Mathematics, Physics, Chemistry, and Computer Science fundamentals.']

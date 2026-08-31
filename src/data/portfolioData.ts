@@ -361,7 +361,7 @@ export const EDUCATION: EducationItem[] = [
   },
   {
     id: "gyankunj-plus-two",
-    degree: "+2 Science (Computer Science Focus)",
+    degree: "+2 Science",
     institution: "Gyankunj SS & College",
     duration: "2018 - Jan 2020",
     location: "Kathmandu, Nepal",
