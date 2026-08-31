@@ -314,7 +314,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     id: "decorum-tech",
     title: "Web Designer",
     organization: "Decorum Technology and Research Center",
-    location: "Nepal",
+    location: "Bangalore, India",
     duration: "Design & Development",
     focusArea: "Web Design & Frontend Development",
     responsibilities: [
