@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, CheckCircle2, ExternalLink, MapPin } from 'lucide-react';
+import { BookOpen, CheckCircle2, ExternalLink, MapPin, Calendar } from 'lucide-react';
 import { EDUCATION } from '../data/portfolioData';
 
 export const Education: React.FC = () => {
@@ -55,9 +55,15 @@ export const Education: React.FC = () => {
                   <p className="text-xs font-semibold text-[var(--purple)] font-mono">
                     {edu.institution}
                   </p>
-                  <div className="flex items-center gap-2 font-mono text-[11px] text-gray-500 pt-1">
-                    <MapPin className="w-3.5 h-3.5 text-gray-500" />
-                    <span>{edu.location}</span>
+                  <div className="flex flex-col gap-1.5 font-mono text-[11px] text-gray-500 pt-1">
+                    <div className="flex items-center gap-2">
+                      <MapPin className="w-3.5 h-3.5 text-gray-500" />
+                      <span>{edu.location}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-amber-500/80">
+                      <Calendar className="w-3.5 h-3.5" />
+                      <span>{edu.duration}</span>
+                    </div>
                   </div>
                 </div>
 
