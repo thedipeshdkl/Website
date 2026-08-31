@@ -85,14 +85,8 @@ const KNOWLEDGE: { keywords: string[]; reply: string }[] = [
       `\u2022 LinkedIn: ${PERSONAL_INFO.linkedin}\n` +
       `\u2022 Instagram: ${PERSONAL_INFO.instagram}\n` +
       `\u2022 Facebook: ${PERSONAL_INFO.facebook}\n` +
-      `\u2022 WhatsApp: ${PERSONAL_INFO.whatsapp}\n` +
       `\u2022 X (Twitter): ${PERSONAL_INFO.twitter}\n` +
-      `\u2022 YouTube: ${PERSONAL_INFO.youtube}\n` +
       `\u2022 GitHub: ${PERSONAL_INFO.github}`
-  },
-  {
-    keywords: ['whatsapp', 'whatsap', 'wa.me', 'direct chat'],
-    reply: 'You can message Dipesh directly on WhatsApp: https://wa.me/dipeshdhakal1522'
   },
   {
     keywords: ['contact', 'email', 'phone', 'reach', 'message'],
@@ -183,12 +177,12 @@ const answer = (input: string): { reply: string; matched: boolean } => {
     if (item.keywords.some((k) => fuzzyMatch(q, k))) return { reply: item.reply, matched: true };
   }
   return {
-    reply: 'I am not sure about that one. Try asking about skills, projects, education, experience, or contact details \u2014 or send it directly to Dipesh on WhatsApp.',
+    reply: 'I am not sure about that one. Try asking about skills, projects, education, experience, or contact details.',
     matched: false
   };
 };
 
-const WA_LINK = 'https://wa.me/dipeshdhakal1522';
+// removed WA_LINK
 
 export const ChatBot: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -254,16 +248,7 @@ export const ChatBot: React.FC = () => {
                     }`}
                   >
                     {m.text}
-                    {m.wa && (
-                      <a
-                        href={`${WA_LINK}?text=${encodeURIComponent(`Hi Dipesh, regarding: ${m.waText || ''}`)}`}
-                        target="_blank"
-                        rel="noopener"
-                        className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/40 text-[var(--purple)] text-[11px] font-mono font-bold hover:bg-emerald-500/25 transition-colors"
-                      >
-                        Chat on WhatsApp &rarr;
-                      </a>
-                    )}
+
                   </div>
                 </div>
               ))}
@@ -315,17 +300,7 @@ export const ChatBot: React.FC = () => {
                   <Send className="w-4 h-4" />
                 </button>
               </div>
-              <p className="mt-2 text-center text-[10px] font-mono text-gray-500">
-                Prefer a direct chat?{' '}
-                <a
-                  href={WA_LINK}
-                  target="_blank"
-                  rel="noopener"
-                  className="text-[var(--purple)] hover:underline"
-                >
-                  Message on WhatsApp &rarr;
-                </a>
-              </p>
+
             </div>
           </div>
         </div>

@@ -63,7 +63,7 @@ export const CyberTerminalModal: React.FC<CyberTerminalModalProps> = ({ isOpen, 
             <p className="text-[var(--purple)] font-bold">PROFILE STATUS: UP TO DATE</p>
             <p>Latest contact email: {PERSONAL_INFO.email}</p>
             <p>Location: {PERSONAL_INFO.location}</p>
-            <p>Social profiles: GitHub, LinkedIn, Instagram, Facebook, WhatsApp, X, YouTube</p>
+            <p>Social profiles: GitHub, LinkedIn, Instagram, Facebook, X</p>
             <p>Education: BSc (Hons) Coventry University, NMIT, Gyankunj</p>
           </div>
         );

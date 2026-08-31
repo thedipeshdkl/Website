@@ -6,14 +6,12 @@ const DATA = {
   name: 'Dipesh Dhakal',
   email: 'dipeshrajdhakal@gmail.com',
   phone: '+977 9851495988',
-  location: 'Kathmandu, 22 Kthamandu, Nepal',
-  github: 'https://github.com/dipeshdhakal1522',
+  location: 'Kathmandu, Nepal',
+  github: 'https://github.com/thedipeshdkl',
   linkedin: 'https://www.linkedin.com/in/dipeshdhakal1522',
   instagram: 'https://www.instagram.com/dipeshdhakal1522',
   facebook: 'https://www.facebook.com/share/1BT9YVq5tp/',
-  whatsapp: 'https://wa.me/dipeshdhakal1522',
   twitter: 'https://x.com/DipeshRajDhakal',
-  youtube: 'https://youtube.com/@dipeshdhakal1522',
   roles: ['Cybersecurity Specialist', 'Web Developer', 'UI/UX Designer', 'Data Analyst'],
   bio: 'Dipesh Dhakal is a cybersecurity researcher and software developer based in Kathmandu, Nepal. His work focuses on identifying and addressing security weaknesses in digital systems and building web applications that are functional, performant, and resilient.',
   aboutParagraphs: [
@@ -80,7 +78,7 @@ const DATA = {
       category: 'Cybersecurity', desc: 'Cybercrime reporting & awareness platform with case tracking, evidence upload & privacy controls.',
       detail: 'SaanjhCyber is a final year capstone project developed in collaboration with Coventry University (September 2026). It provides a structured process for reporting cybercrime incidents, supports secure evidence uploads, tracks case progress via unique Case IDs, and maintains a searchable database of suspicious online entities.',
       tags: ['React', 'TypeScript', 'Vite', 'API'],
-      github: 'https://github.com/dipeshdhakal1522/SaanjhCyber', live: null,
+      github: 'https://github.com/thedipeshdkl/SaanjhCyber', live: null,
       image: 'images/saanjhcyber-dashboard.jpg',
       highlights: [
         'Guided Multi-Step Incident Reporting Flow',
@@ -94,7 +92,7 @@ const DATA = {
       category: 'Finance', desc: 'NEPSE analysis platform with stock insights, technical analysis, portfolio tracking & calculators.',
       detail: 'NoirLink Trading provides technical indicator charts, fundamental stock screening, portfolio tracking, and index sentiment metrics for individual investors trading in the Nepal Stock Exchange.',
       tags: ['React', 'TypeScript', 'Tailwind', 'Python'],
-      github: 'https://github.com/dipeshdhakal1522/-NoirLink-Traderchang', live: null,
+      github: 'https://github.com/thedipeshdkl/-NoirLink-Traderchang', live: null,
       image: 'images/noirlink-banner.jpg',
       highlights: [
         'NEPSE Market Sentiment & Index Charts',
@@ -107,7 +105,7 @@ const DATA = {
       category: 'Cybersecurity', desc: 'File integrity & authenticity verification system to detect tampering and protect data integrity.',
       detail: 'This cryptographic security utility monitors designated filesystem directories and computes SHA-256/SHA-512 hashes to detect file modification, corruption, or unauthorized tampering, generating audit logs for review.',
       tags: ['Python', 'Hashing', 'Tkinter', 'Security'],
-      github: 'https://github.com/dipeshdhakal1522/File-Integrity-Authenticity-Verification-System', live: null,
+      github: 'https://github.com/thedipeshdkl/File-Integrity-Authenticity-Verification-System', live: null,
       image: 'images/file-integrity-banner.jpg',
       highlights: [
         'Continuous SHA-256 & SHA-512 Hash Monitoring',
@@ -120,7 +118,7 @@ const DATA = {
       category: 'Automation', desc: 'Automated news crawling & data extraction system for collecting and processing online news.',
       detail: 'News Crawler extracts news articles, headlines, publication dates, and body text from online news sources. It cleans raw HTML, removes duplicates, and exports structured datasets.',
       tags: ['Python', 'Scrapy', 'BeautifulSoup', 'CSV'],
-      github: 'https://github.com/dipeshdhakal1522/news_crawler', live: null,
+      github: 'https://github.com/thedipeshdkl/news_crawler', live: null,
       image: 'images/news-crawler-banner.jpg',
       highlights: [
         'Multi-Threaded Asynchronous Web Scraping Engine',
@@ -197,19 +195,17 @@ const DATA = {
     { title: 'Enterprise Networking & System Administration', org: 'Nepal Telecom Training', date: '2023' }
   ],
   repos: [
-    { name: 'SaanjhCyber', desc: 'Cybercrime reporting & awareness platform with case tracking, evidence upload, and privacy controls.', url: 'https://github.com/dipeshdhakal1522/SaanjhCyber' },
-    { name: 'NoirLink-Traderchang', desc: 'NEPSE analysis platform with technical charts, screening, portfolio tracking & calculators.', url: 'https://github.com/dipeshdhakal1522/-NoirLink-Traderchang' },
-    { name: 'File-Integrity-Authenticity-Verification-System', desc: 'SHA-256/SHA-512 based file tamper detection and audit logging tool.', url: 'https://github.com/dipeshdhakal1522/File-Integrity-Authenticity-Verification-System' },
-    { name: 'news_crawler', desc: 'Automated multi-threaded web scraping engine with JSON/CSV export.', url: 'https://github.com/dipeshdhakal1522/news_crawler' }
+    { name: 'SaanjhCyber', desc: 'Cybercrime reporting & awareness platform with case tracking, evidence upload, and privacy controls.', url: 'https://github.com/thedipeshdkl/SaanjhCyber' },
+    { name: 'NoirLink-Traderchang', desc: 'NEPSE analysis platform with technical charts, screening, portfolio tracking & calculators.', url: 'https://github.com/thedipeshdkl/-NoirLink-Traderchang' },
+    { name: 'File-Integrity-Authenticity-Verification-System', desc: 'SHA-256/SHA-512 based file tamper detection and audit logging tool.', url: 'https://github.com/thedipeshdkl/File-Integrity-Authenticity-Verification-System' },
+    { name: 'news_crawler', desc: 'Automated multi-threaded web scraping engine with JSON/CSV export.', url: 'https://github.com/thedipeshdkl/news_crawler' }
   ],
   socials: [
-    { name: 'GitHub', handle: '@dipeshdhakal1522', url: 'https://github.com/dipeshdhakal1522' },
+    { name: 'GitHub', handle: '@dipeshdhakal1522', url: 'https://github.com/thedipeshdkl' },
     { name: 'LinkedIn', handle: 'in/dipeshdhakal1522', url: 'https://www.linkedin.com/in/dipeshdhakal1522' },
     { name: 'Instagram', handle: '@dipeshdhakal1522', url: 'https://www.instagram.com/dipeshdhakal1522' },
     { name: 'Facebook', handle: 'dipeshdhakal1522', url: 'https://www.facebook.com/share/1BT9YVq5tp/' },
-    { name: 'WhatsApp', handle: '+977 9851495988', url: 'https://wa.me/dipeshdhakal1522' },
-    { name: 'X (Twitter)', handle: '@DipeshRajDhakal', url: 'https://x.com/DipeshRajDhakal' },
-    { name: 'YouTube', handle: '@dipeshdhakal1522', url: 'https://youtube.com/@dipeshdhakal1522', full: true }
+    { name: 'X (Twitter)', handle: '@DipeshRajDhakal', url: 'https://x.com/DipeshRajDhakal' }
   ]
 };
 
@@ -482,7 +478,7 @@ function termCommand(cmd) {
       termPrint('SaanjhCyber \u2014 Cybercrime Reporting Platform');
       termPrint('Capstone project with Coventry University (September 2026).');
       termPrint('Case tracking, evidence upload, privacy controls, and a searchable entity database.');
-      termPrint('https://github.com/dipeshdhakal1522/SaanjhCyber', 'ok');
+      termPrint('https://github.com/thedipeshdkl/SaanjhCyber', 'ok');
       break;
     case 'contact':
       termPrint('Email:    ' + DATA.email);
@@ -663,19 +659,19 @@ const CHAT_KNOWLEDGE = [
   },
   {
     keywords: ['saanjh', 'saanjhcyber'],
-    reply: DATA.projects[0].detail + '\n\nGitHub: https://github.com/dipeshdhakal1522/SaanjhCyber'
+    reply: DATA.projects[0].detail + '\n\nGitHub: https://github.com/thedipeshdkl/SaanjhCyber'
   },
   {
     keywords: ['noir', 'noirlink', 'nepse', 'stock', 'trading'],
-    reply: DATA.projects[1].detail + '\n\nGitHub: https://github.com/dipeshdhakal1522/-NoirLink-Traderchang'
+    reply: DATA.projects[1].detail + '\n\nGitHub: https://github.com/thedipeshdkl/-NoirLink-Traderchang'
   },
   {
     keywords: ['file integrity', 'integrity'],
-    reply: DATA.projects[2].detail + '\n\nGitHub: https://github.com/dipeshdhakal1522/File-Integrity-Authenticity-Verification-System'
+    reply: DATA.projects[2].detail + '\n\nGitHub: https://github.com/thedipeshdkl/File-Integrity-Authenticity-Verification-System'
   },
   {
     keywords: ['news crawler', 'crawler', 'scraping', 'scraper'],
-    reply: DATA.projects[3].detail + '\n\nGitHub: https://github.com/dipeshdhakal1522/news_crawler'
+    reply: DATA.projects[3].detail + '\n\nGitHub: https://github.com/thedipeshdkl/news_crawler'
   },
   {
     keywords: ['education', 'study', 'university', 'degree', 'college', 'academic'],
@@ -700,23 +696,17 @@ const CHAT_KNOWLEDGE = [
     reply: 'Facebook page: https://www.facebook.com/share/1BT9YVq5tp/'
   },
   {
-    keywords: ['social', 'socials', 'social media', 'instagram', 'twitter', 'youtube', 'linkedin', 'follow', 'handles'],
+    keywords: ['social', 'socials', 'social media', 'instagram', 'twitter', 'linkedin', 'follow', 'handles'],
     reply: 'Connect with Dipesh across platforms:\n' +
       '\u2022 LinkedIn: ' + DATA.linkedin + '\n' +
       '\u2022 Instagram: ' + DATA.instagram + '\n' +
       '\u2022 Facebook: ' + DATA.facebook + '\n' +
-      '\u2022 WhatsApp: ' + DATA.whatsapp + '\n' +
       '\u2022 X (Twitter): ' + DATA.twitter + '\n' +
-      '\u2022 YouTube: ' + DATA.youtube + '\n' +
       '\u2022 GitHub: ' + DATA.github
   },
   {
-    keywords: ['whatsapp', 'whatsap', 'wa.me', 'direct chat'],
-    reply: 'You can message Dipesh directly on WhatsApp: https://wa.me/dipeshdhakal1522'
-  },
-  {
     keywords: ['contact', 'email', 'phone', 'reach', 'message'],
-    reply: 'You can reach Dipesh at:\n\u2022 Email: ' + DATA.email + '\n\u2022 Phone: ' + DATA.phone + '\n\u2022 LinkedIn: ' + DATA.linkedin + '\n\u2022 GitHub: ' + DATA.github + '\n\u2022 WhatsApp: ' + DATA.whatsapp + '\n\nOr use the contact form on this page.'
+    reply: 'You can reach Dipesh at:\n\u2022 Email: ' + DATA.email + '\n\u2022 Phone: ' + DATA.phone + '\n\u2022 LinkedIn: ' + DATA.linkedin + '\n\u2022 GitHub: ' + DATA.github + '\n\nOr use the contact form on this page.'
   },
   {
     keywords: ['location', 'where', 'based', 'kathmandu', 'nepal'],
@@ -747,10 +737,7 @@ const CHAT_KNOWLEDGE = [
     keywords: ['resume', 'cv', 'curriculum'],
     reply: 'Use the "Download CV" button in the sidebar to view the full resume with education, experience, and skills.'
   },
-  {
-    keywords: ['whatsapp', 'whatsap', 'wa.me', 'direct chat'],
-    reply: 'You can message Dipesh directly on WhatsApp: https://wa.me/dipeshdhakal1522'
-  },
+
   {
     keywords: ['thanks', 'thank you', 'thx', 'dhan', 'dhanyabad', 'appreciate'],
     reply: 'You are welcome! Feel free to ask anything else about Dipesh\u2019s work. \uD83D\uDE42'
@@ -800,26 +787,15 @@ function chatAnswer(input) {
     if (item.keywords.some((k) => fuzzyMatch(q, k))) return { text: item.reply, matched: true };
   }
   return {
-    text: 'I am not sure about that one. Try asking about skills, projects, education, experience, or contact details \u2014 or send it directly to Dipesh on WhatsApp.',
+    text: 'I am not sure about that one. Try asking about skills, projects, education, experience, or contact details.',
     matched: false
   };
 }
 
-const WA_LINK = 'https://wa.me/dipeshdhakal1522';
-
-function chatAdd(text, role, waText) {
+function chatAdd(text, role) {
   const div = document.createElement('div');
   div.className = 'msg ' + role;
   div.textContent = text;
-  if (waText) {
-    const link = document.createElement('a');
-    link.className = 'chat-wa';
-    link.href = WA_LINK + '?text=' + encodeURIComponent('Hi Dipesh, regarding: ' + waText);
-    link.target = '_blank';
-    link.rel = 'noopener';
-    link.textContent = 'Chat on WhatsApp \u2192';
-    div.appendChild(link);
-  }
   chatBody.appendChild(div);
   chatBody.scrollTop = chatBody.scrollHeight;
 }
