@@ -369,7 +369,7 @@ export const EDUCATION: EducationItem[] = [
     duration: "Specialized Training",
     location: "Bengaluru, India",
     badge: "Specialization",
-    imagePath: "/nitte-nmit.jpg",
+    imagePath: "/nitte-nmit.png",
     url: "https://nitte.edu.in/nmit/",
     details: [
       "Specialized training in UI/UX design and digital marketing strategy."
