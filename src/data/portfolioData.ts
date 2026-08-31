@@ -283,7 +283,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     title: "Social Engineering & Security Analyst",
     organization: "GANGA Offensive Ops Pvt. Ltd.",
     location: "Nepal",
-    duration: "Security Research Focus",
+    duration: "Sep 2025 - Present",
     focusArea: "Social Engineering & Vulnerability Assessment",
     responsibilities: [
       "Conducted simulated phishing campaigns and social engineering awareness assessments.",
@@ -299,7 +299,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     title: "IT & Network Intern",
     organization: "Nepal Telecom",
     location: "Kathmandu, Nepal",
-    duration: "Internship",
+    duration: "Oct 2024 - Jan 2025",
     focusArea: "IT & Telecom Infrastructure",
     responsibilities: [
       "Assisted network engineers with telecommunications infrastructure monitoring and diagnostics.",
@@ -315,7 +315,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     title: "Web Designer",
     organization: "Decorum Technology and Research Center",
     location: "Bangalore, India",
-    duration: "Design & Development",
+    duration: "Jan 2020 - Sep 2024",
     focusArea: "Web Design & Frontend Development",
     responsibilities: [
       "Designed and developed responsive websites and user interfaces for clients.",
@@ -331,7 +331,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     title: "Radio Program Producer & Presenter",
     organization: "Radio Palung FM",
     location: "Palung, Nepal",
-    duration: "Media & Broadcasting",
+    duration: "Jan 2014 - Apr 2019",
     focusArea: "Audio Production & Public Communication",
     responsibilities: [
       "Produced and hosted radio shows covering technology trends and community topics.",
