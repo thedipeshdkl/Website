@@ -67,13 +67,27 @@ export const Experience: React.FC = () => {
                           <span className="text-gray-500">{exp.location}</span>
                         </div>
 
-                        <h3 className="text-xl font-bold text-stone-100 tracking-wide">
-                          {exp.title}
-                        </h3>
-
-                        <h4 className="text-sm font-medium text-gray-400 font-mono">
-                          {exp.organization}
-                        </h4>
+                        <div className="flex items-center gap-3">
+                          {exp.imagePath && (
+                            <a href={exp.url || "#"} target={exp.url ? "_blank" : undefined} rel={exp.url ? "noopener noreferrer" : undefined}>
+                              <img src={exp.imagePath} alt={exp.organization} className="w-12 h-12 object-contain bg-white/10 rounded-md border border-gray-700/50 p-1 hover:border-cyan-500/50 transition-colors shrink-0" />
+                            </a>
+                          )}
+                          <div>
+                            <h3 className="text-xl font-bold text-stone-100 tracking-wide">
+                              {exp.url ? (
+                                <a href={exp.url} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--purple)] transition-colors">
+                                  {exp.title}
+                                </a>
+                              ) : (
+                                exp.title
+                              )}
+                            </h3>
+                            <h4 className="text-sm font-medium text-gray-400 font-mono">
+                              {exp.organization}
+                            </h4>
+                          </div>
+                        </div>
                       </div>
 
                       {/* Responsibilities list */}

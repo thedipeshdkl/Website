@@ -40,6 +40,8 @@ export interface ExperienceItem {
   isCurrent?: boolean;
   responsibilities: string[];
   tags: string[];
+  imagePath?: string;
+  url?: string;
 }
 
 export interface EducationItem {
@@ -330,7 +332,9 @@ export const EXPERIENCES: ExperienceItem[] = [
       "Managed digital audio editing, sound mixing, and broadcast schedules.",
       "Developed public speaking, clear communication, and audience engagement skills."
     ],
-    tags: ["Radio Broadcasting", "Audio Editing", "Public Communication"]
+    tags: ["Radio Broadcasting", "Audio Editing", "Public Communication"],
+    imagePath: "/radio-palung.png",
+    url: "https://www.hamropatro.com/radio/Radio-Palung-107.2-MHz"
   }
 ];
 
