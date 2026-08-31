@@ -110,7 +110,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
           {/* Right Image Column */}
           <div className="flex w-full lg:w-1/3 justify-center lg:justify-end items-start pt-8 lg:pt-0 lg:pr-10">
-            <div className="w-56 h-56 lg:w-64 lg:h-64 shrink-0 rounded-full border-[1.5px] border-black overflow-hidden shadow-2xl">
+            <div className="relative w-56 h-56 lg:w-64 lg:h-64 shrink-0 rounded-full border-2 border-cyan-500/50 overflow-hidden shadow-[0_0_30px_rgba(6,182,212,0.4)] transition-all duration-500 hover:shadow-[0_0_50px_rgba(6,182,212,0.6)]">
               <img 
                 src={PERSONAL_INFO.profilePicture} 
                 alt="Profile" 

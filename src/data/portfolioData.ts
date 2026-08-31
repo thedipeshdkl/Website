@@ -76,7 +76,7 @@ export const PERSONAL_INFO = {
     "Data Analyst"
   ],
   heroBadge: "Cybersecurity & Technology",
-  profilePicture: "/profile-photo.jpg",
+  profilePicture: "/dipesh-dhakal.jpg",
   location: "Kathmandu, 22 Kthamandu, Nepal",
   email: "dipeshrajdhakal@gmail.com",
 
