@@ -356,7 +356,7 @@ export const EDUCATION: EducationItem[] = [
     duration: "Higher Secondary",
     location: "Kathmandu, Nepal",
     badge: "High School",
-    imagePath: "/gyankunj-college.jpg",
+    imagePath: "/gyankunj-college.png",
     url: "https://gyankunjschool.edu.np/",
     details: [
       "Foundation in Mathematics, Physics, Chemistry, and Computer Science fundamentals."
