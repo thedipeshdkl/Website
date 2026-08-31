@@ -290,7 +290,9 @@ export const EXPERIENCES: ExperienceItem[] = [
       "Assisted in evaluating human-factor threat vectors and drafting remediation reports.",
       "Researched attack surfaces and OSINT techniques for organizational risk reduction."
     ],
-    tags: ["Social Engineering", "Phishing Simulation", "Cybersecurity", "OSINT"]
+    tags: ["Social Engineering", "Phishing Simulation", "Cybersecurity", "OSINT"],
+    imagePath: "/ganga-offensive.png",
+    url: "https://www.gangaoffensiveops.com.np/"
   },
   {
     id: "nepal-telecom",
