@@ -318,7 +318,9 @@ export const EXPERIENCES: ExperienceItem[] = [
       "Translated design concepts into functional frontend builds.",
       "Collaborated with teams on layout, usability, and visual consistency."
     ],
-    tags: ["Web Design", "Frontend", "UI/UX"]
+    tags: ["Web Design", "Frontend", "UI/UX"],
+    imagePath: "/decorum.png",
+    url: "https://np.linkedin.com/company/decorumtechnology"
   },
   {
     id: "radio-palung",
