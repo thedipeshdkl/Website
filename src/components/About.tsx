@@ -1,37 +1,58 @@
 import React from 'react';
 import { 
   ShieldAlert, 
-  Code2, 
-  Layout, 
-  Database 
+  GlobeLock, 
+  ScanSearch, 
+  Network,
+  Bot,
+  Code2,
+  BookOpen
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const About: React.FC = () => {
-  const capabilityCards = [
+  const focusAreas = [
     {
-      title: "Penetration Testing",
-      desc: "Web application security audits, vulnerability scans, and OSINT research.",
+      title: "Ethical Hacking & Pentesting",
+      desc: "Simulating attacks to identify and patch system vulnerabilities.",
       icon: ShieldAlert,
       bgClass: "bg-red-950/40 border-red-500/30 text-red-400"
     },
     {
-      title: "Web Development",
-      desc: "Developing React, TypeScript, and Python web software.",
+      title: "Web App Security",
+      desc: "Securing web applications against OWASP Top 10 and advanced threats.",
+      icon: GlobeLock,
+      bgClass: "bg-emerald-950/40 border-emerald-500/30 text-emerald-400"
+    },
+    {
+      title: "Vulnerability Assessment",
+      desc: "Systematic review of security weaknesses and risk evaluation.",
+      icon: ScanSearch,
+      bgClass: "bg-amber-950/40 border-amber-500/30 text-amber-400"
+    },
+    {
+      title: "Network Security",
+      desc: "Analyzing network traffic and defending infrastructure.",
+      icon: Network,
+      bgClass: "bg-blue-950/40 border-blue-500/30 text-blue-400"
+    },
+    {
+      title: "Security Automation",
+      desc: "Building scripts and tools to automate security workflows.",
+      icon: Bot,
+      bgClass: "bg-purple-950/40 border-purple-500/30 text-purple-400"
+    },
+    {
+      title: "Secure Software Dev",
+      desc: "Integrating security practices throughout the SDLC.",
       icon: Code2,
-      bgClass: "bg-amber-950/40 border-amber-500/30 text-[var(--purple)]"
+      bgClass: "bg-stone-800/40 border-stone-500/30 text-stone-300"
     },
     {
-      title: "UI/UX Design",
-      desc: "Designing dashboards and user interfaces for clarity and usability.",
-      icon: Layout,
-      bgClass: "bg-amber-950/40 border-amber-500/30 text-[var(--purple)]"
-    },
-    {
-      title: "Data Analysis",
-      desc: "Web crawlers, log analysis, and structured data extraction.",
-      icon: Database,
-      bgClass: "bg-emerald-950/40 border-emerald-500/30 text-[var(--purple)]"
+      title: "Cybersecurity Research",
+      desc: "Studying emerging threats and novel mitigation techniques.",
+      icon: BookOpen,
+      bgClass: "bg-rose-950/40 border-rose-500/30 text-rose-400"
     }
   ];
 
@@ -58,9 +79,9 @@ export const About: React.FC = () => {
           </div>
         </div>
 
-        {/* 4 Capability Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pt-2">
-          {capabilityCards.map((card, idx) => {
+        {/* Areas of Focus Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+          {focusAreas.map((card, idx) => {
             const Icon = card.icon;
             return (
               <div

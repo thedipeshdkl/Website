@@ -103,8 +103,10 @@ export const PERSONAL_INFO = {
   heroBio: `Develops secure web applications, custom Python security tools, and vulnerability assessments. Currently completing a BSc (Hons) in Ethical Hacking & Cyber Security at Coventry University.`,
   bio: `Dipesh Dhakal is a cybersecurity researcher and software developer based in Kathmandu, Nepal. His work focuses on identifying and addressing security weaknesses in digital systems and building web applications that are functional, performant, and resilient.`,
   aboutParagraphs: [
-    `Currently pursuing a BSc (Hons) in Ethical Hacking & Cyber Security from Coventry University. Practical experience spans offensive security research, penetration testing, and full-stack web development, including SaanjhCyber and stock analytics tools for the Nepal Stock Exchange.`,
-    `Additional background in media production (Radio Palung FM) and web design provides a broader perspective on communication, project management, and user experience.`
+    `I am Dipesh Dhakal, a cybersecurity professional and security-focused developer with a strong interest in ethical hacking, web application security, penetration testing, and secure software development.`,
+    `I hold a BSc (Hons) in Ethical Hacking and Cyber Security from Coventry University, where I developed a strong foundation in cybersecurity principles, security assessment, network security, ethical hacking, and secure technologies.`,
+    `I enjoy combining cybersecurity with software development to build practical, security-focused solutions. My projects include SaanjhCyber, a cybercrime reporting and intelligence platform designed to support structured incident reporting, case tracking, evidence management, and cybersecurity awareness.`,
+    `My approach focuses on continuous learning, practical security research, and responsible use of technology. I am particularly interested in identifying security weaknesses, understanding how systems can be protected, and developing reliable solutions that improve digital security.`
   ],
   stats: [
     { label: "Years Experience", value: "3+", icon: "Shield" },

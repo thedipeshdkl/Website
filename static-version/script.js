@@ -13,10 +13,12 @@ const DATA = {
   facebook: 'https://www.facebook.com/share/1BT9YVq5tp/',
   twitter: 'https://x.com/DipeshRajDhakal',
   roles: ['Cybersecurity Specialist', 'Web Developer', 'UI/UX Designer', 'Data Analyst'],
-  bio: 'Dipesh Dhakal is a cybersecurity researcher and software developer based in Kathmandu, Nepal. His work focuses on identifying and addressing security weaknesses in digital systems and building web applications that are functional, performant, and resilient.',
+  bio: '',
   aboutParagraphs: [
-    'Currently pursuing a BSc (Hons) in Ethical Hacking & Cyber Security from Coventry University. Practical experience spans offensive security research, penetration testing, and full-stack web development, including SaanjhCyber and stock analytics tools for the Nepal Stock Exchange.',
-    'Additional background in media production (Radio Palung FM) and web design provides a broader perspective on communication, project management, and user experience.'
+    'I am Dipesh Dhakal, a cybersecurity professional and security-focused developer with a strong interest in ethical hacking, web application security, penetration testing, and secure software development.',
+    'I hold a BSc (Hons) in Ethical Hacking and Cyber Security from Coventry University, where I developed a strong foundation in cybersecurity principles, security assessment, network security, ethical hacking, and secure technologies.',
+    'I enjoy combining cybersecurity with software development to build practical, security-focused solutions. My projects include SaanjhCyber, a cybercrime reporting and intelligence platform designed to support structured incident reporting, case tracking, evidence management, and cybersecurity awareness.',
+    'My approach focuses on continuous learning, practical security research, and responsible use of technology. I am particularly interested in identifying security weaknesses, understanding how systems can be protected, and developing reliable solutions that improve digital security.'
   ],
   stats: [
     { label: 'Years Experience', value: '3+', icon: '\u{1F6E1}\uFE0F' },
@@ -25,10 +27,13 @@ const DATA = {
     { label: 'Organizations', value: '4+', icon: '\u{1F465}' }
   ],
   capabilities: [
-    { title: 'Penetration Testing', desc: 'Web application security audits, vulnerability scans, network reconnaissance, and security assessments.', icon: '\u26A0\uFE0F' },
-    { title: 'Web Development', desc: 'Developing React, TypeScript, and Python web applications with modern APIs.', icon: '\u{1F4BB}' },
-    { title: 'UI/UX Design', desc: 'Designing dashboards and user interfaces with a focus on clarity and usability.', icon: '\u{1F5BC}\uFE0F' },
-    { title: 'Data Analysis', desc: 'Writing web crawlers, log analysis scripts, and structured data extraction tooling.', icon: '\u{1F4CA}' }
+    { title: 'Ethical Hacking & Pentesting', desc: 'Simulating attacks to identify and patch system vulnerabilities.', icon: '🛡️' },
+    { title: 'Web App Security', desc: 'Securing web applications against OWASP Top 10 and advanced threats.', icon: '🌐' },
+    { title: 'Vulnerability Assessment', desc: 'Systematic review of security weaknesses and risk evaluation.', icon: '🔍' },
+    { title: 'Network Security', desc: 'Analyzing network traffic and defending infrastructure.', icon: '🛜' },
+    { title: 'Security Automation', desc: 'Building scripts and tools to automate security workflows.', icon: '🤖' },
+    { title: 'Secure Software Dev', desc: 'Integrating security practices throughout the SDLC.', icon: '💻' },
+    { title: 'Cybersecurity Research', desc: 'Studying emerging threats and novel mitigation techniques.', icon: '📖' }
   ],
   skills: [
     {
