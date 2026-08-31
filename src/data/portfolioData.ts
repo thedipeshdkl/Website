@@ -7,9 +7,11 @@ export interface Project {
   subtitle?: string;
   description: string;
   detailedDescription?: string;
+  problemSolved: string;
   techTags: string[];
   githubUrl: string;
   liveDemoUrl?: string;
+  caseStudyUrl?: string;
   highlights: string[];
   imagePlaceholderText: string;
   imagePath: string;
@@ -200,6 +202,7 @@ export const PROJECTS: Project[] = [
     isPrimaryFeatured: true,
     description: "Cybercrime reporting & awareness platform with case tracking, evidence upload & privacy controls.",
     detailedDescription: "SaanjhCyber is a final year capstone project developed in collaboration with Coventry University (September 2026). It provides a structured process for reporting cybercrime incidents, supports secure evidence uploads, tracks case progress via unique Case IDs, and maintains a searchable database of suspicious online entities.",
+    problemSolved: "Addressed the critical need for a structured and secure process for victims to report cybercrimes and for investigators to track cases while maintaining data privacy.",
     techTags: ["React", "TypeScript", "Vite", "API"],
     githubUrl: "https://github.com/thedipeshdkl/SaanjhCyber",
     highlights: [
@@ -221,6 +224,7 @@ export const PROJECTS: Project[] = [
     categoryLabel: "NEPSE Market Platform",
     description: "NEPSE analysis platform with stock insights, technical analysis, portfolio tracking & calculators.",
     detailedDescription: "NoirLink Trading provides technical indicator charts, fundamental stock screening, portfolio tracking, and index sentiment metrics for individual investors trading in the Nepal Stock Exchange.",
+    problemSolved: "Solved the lack of accessible, consolidated technical indicator charts and fundamental stock screening for individual investors trading in the Nepal Stock Exchange.",
     techTags: ["React", "TypeScript", "Tailwind", "Python"],
     githubUrl: "https://github.com/thedipeshdkl/-NoirLink-Traderchang",
     highlights: [
@@ -241,6 +245,7 @@ export const PROJECTS: Project[] = [
     categoryLabel: "Security Utility",
     description: "File integrity & authenticity verification system to detect tampering and protect data integrity.",
     detailedDescription: "This cryptographic security utility monitors designated filesystem directories and computes SHA-256/SHA-512 hashes to detect file modification, corruption, or unauthorized tampering, generating audit logs for review.",
+    problemSolved: "Mitigated the risk of unauthorized data tampering by providing continuous cryptographic hash monitoring and automated alerting for critical filesystems.",
     techTags: ["Python", "Hashing", "Tkinter", "Security"],
     githubUrl: "https://github.com/thedipeshdkl/File-Integrity-Authenticity-Verification-System",
     highlights: [
@@ -261,6 +266,7 @@ export const PROJECTS: Project[] = [
     categoryLabel: "Web Crawler & Data Engine",
     description: "Automated news crawling & data extraction system for collecting and processing online news.",
     detailedDescription: "News Crawler extracts news articles, headlines, publication dates, and body text from online news sources. It cleans raw HTML, removes duplicates, and exports structured datasets.",
+    problemSolved: "Overcame the inefficiency of manual news gathering by building a highly concurrent engine that automatically scrapes, cleans, and de-duplicates online news data.",
     techTags: ["Python", "Scrapy", "BeautifulSoup", "CSV"],
     githubUrl: "https://github.com/thedipeshdkl/news_crawler",
     highlights: [

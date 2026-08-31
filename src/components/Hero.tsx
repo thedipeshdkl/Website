@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, Download, Shield, Briefcase } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface HeroProps {
@@ -8,58 +8,6 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
-  const roles = [
-    "Cyber Security",
-    "Web Development",
-    "Ethical Hacking",
-    "Penetration Testing",
-    "Web App Security",
-    "UI/UX Design",
-    "OSINT"
-  ];
-  const [roleIndex, setRoleIndex] = useState(0);
-  const [text, setText] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [nameText, setNameText] = useState('');
-
-  // Typing effect for the name (types once on load)
-  useEffect(() => {
-    const fullName = PERSONAL_INFO.name;
-    let i = 0;
-    const interval = setInterval(() => {
-      setNameText(fullName.substring(0, i + 1));
-      i++;
-      if (i >= fullName.length) {
-        clearInterval(interval);
-      }
-    }, 100); // 100ms per letter
-    return () => clearInterval(interval);
-  }, []);
-
-  // Typing effect for the roles (cycles infinitely)
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      const currentRole = roles[roleIndex];
-      
-      if (isDeleting) {
-        setText(currentRole.substring(0, text.length - 1));
-        if (text.length === 0) {
-          setIsDeleting(false);
-          setRoleIndex((prev) => (prev + 1) % roles.length);
-        }
-      } else {
-        setText(currentRole.substring(0, text.length + 1));
-        if (text.length === currentRole.length) {
-          // Pause at the end of typing
-          setTimeout(() => setIsDeleting(true), 1500);
-          return;
-        }
-      }
-    }, isDeleting ? 50 : 150);
-
-    return () => clearTimeout(timeout);
-  }, [text, isDeleting, roleIndex]);
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -72,50 +20,73 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
   return (
     <section id="home" className="relative pt-32 pb-20 overflow-hidden min-h-[90vh] flex items-center -mt-28">
       <div className="max-w-7xl mx-auto w-full relative z-10 px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-8 pt-10">
           
           {/* Left Text Column */}
-          <div className="w-full lg:w-2/3 space-y-4 text-left pt-10">
-            <h2 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-stone-100 tracking-wide">
-              Hi There,
-            </h2>
-            <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-stone-100 tracking-wide">
-              I am <span className="text-cyan-400">{nameText}</span>
-            </h1>
-            <h2 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-stone-100 tracking-wide h-[48px] sm:h-[60px] lg:h-[60px]">
-              I am Into <span className="text-cyan-400">{text}</span>
-              <span className="text-orange-500 animate-pulse">|</span>
-            </h2>
+          <div className="w-full lg:w-3/5 space-y-6 text-left">
+            <div className="space-y-4">
+              <h2 className="text-xl sm:text-2xl font-mono text-cyan-400 font-semibold tracking-wide flex items-center gap-2">
+                <Shield className="w-6 h-6" /> Dipesh Dhakal
+              </h2>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-100 tracking-tight leading-tight">
+                Cybersecurity Specialist <br className="hidden sm:block" />
+                <span className="text-stone-400 text-3xl sm:text-4xl lg:text-5xl">&amp; Security-Focused Developer</span>
+              </h1>
+            </div>
 
+            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl leading-relaxed">
+              Building secure applications, exploring offensive security, and developing cybersecurity-focused solutions.
+            </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="pt-2 pb-2">
+              <p className="text-sm font-mono text-cyan-500/80 tracking-widest font-semibold flex flex-wrap gap-2 items-center uppercase">
+                <span>Cybersecurity</span>
+                <span className="text-stone-600">&bull;</span>
+                <span>Web Security</span>
+                <span className="text-stone-600">&bull;</span>
+                <span>Security Automation</span>
+                <span className="text-stone-600">&bull;</span>
+                <span>Secure Development</span>
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4 pt-4">
               <button
-                onClick={() => scrollToSection('contact')}
-                className="flex items-center justify-center gap-1.5 px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium text-xs sm:text-sm w-max shadow-[0_0_15px_rgba(14,165,233,0.5)] transition-transform hover:scale-105"
+                onClick={() => scrollToSection('projects')}
+                className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-stone-950 font-bold transition-all shadow-[0_0_15px_rgba(6,182,212,0.4)] hover:scale-105"
+                aria-label="View Projects"
               >
-                Contact <ArrowRight className="w-3.5 h-3.5" />
+                <Briefcase className="w-4 h-4" /> View Projects
               </button>
 
               <button
                 onClick={onOpenResume}
-                className="flex items-center justify-center gap-1.5 px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium text-xs sm:text-sm w-max shadow-[0_0_15px_rgba(14,165,233,0.5)] transition-transform hover:scale-105"
+                className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-stone-800 hover:bg-stone-700 border border-stone-600 text-stone-200 font-medium transition-all hover:scale-105"
+                aria-label="Download CV"
               >
-                Resume 
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
+                <Download className="w-4 h-4" /> Download CV
+              </button>
+              
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-transparent hover:bg-stone-800/50 text-stone-300 font-medium transition-all hover:text-cyan-400 group"
+                aria-label="Contact Me"
+              >
+                Contact Me <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           </div>
 
           {/* Right Image Column */}
-          <div className="flex w-full lg:w-1/3 justify-center lg:justify-end items-start pt-8 lg:pt-0 lg:pr-10">
-            <div className="relative w-56 h-56 lg:w-64 lg:h-64 shrink-0 rounded-full border-2 border-cyan-500/50 overflow-hidden shadow-[0_0_30px_rgba(6,182,212,0.4)] transition-all duration-500 hover:shadow-[0_0_50px_rgba(6,182,212,0.6)]">
+          <div className="flex w-full lg:w-2/5 justify-center lg:justify-end items-center lg:pr-6">
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 shrink-0 rounded-2xl border border-cyan-500/30 overflow-hidden shadow-[0_0_30px_rgba(6,182,212,0.3)] bg-stone-900 group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-900/40 to-transparent mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity duration-500"></div>
               <img 
                 src={PERSONAL_INFO.profilePicture} 
-                alt="Profile" 
-                className="w-full h-full object-cover" 
+                alt="Dipesh Dhakal" 
+                className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500" 
               />
+              <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl z-20"></div>
             </div>
           </div>
 

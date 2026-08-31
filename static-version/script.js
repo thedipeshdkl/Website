@@ -77,8 +77,10 @@ const DATA = {
       id: 'saanjhcyber', title: 'SaanjhCyber', subtitle: 'Cybercrime Reporting Platform',
       category: 'Cybersecurity', desc: 'Cybercrime reporting & awareness platform with case tracking, evidence upload & privacy controls.',
       detail: 'SaanjhCyber is a final year capstone project developed in collaboration with Coventry University (September 2026). It provides a structured process for reporting cybercrime incidents, supports secure evidence uploads, tracks case progress via unique Case IDs, and maintains a searchable database of suspicious online entities.',
+      problemSolved: 'Addressed the critical need for a structured and secure process for victims to report cybercrimes and for investigators to track cases while maintaining data privacy.',
+      isPrimaryFeatured: true,
       tags: ['React', 'TypeScript', 'Vite', 'API'],
-      github: 'https://github.com/thedipeshdkl/SaanjhCyber', live: null,
+      github: 'https://github.com/thedipeshdkl/SaanjhCyber', live: null, caseStudyUrl: null,
       image: 'images/saanjhcyber-dashboard.jpg',
       highlights: [
         'Guided Multi-Step Incident Reporting Flow',
@@ -91,8 +93,10 @@ const DATA = {
       id: 'noirlink', title: 'NoirLink Trading', subtitle: 'NEPSE Analysis Platform',
       category: 'Finance', desc: 'NEPSE analysis platform with stock insights, technical analysis, portfolio tracking & calculators.',
       detail: 'NoirLink Trading provides technical indicator charts, fundamental stock screening, portfolio tracking, and index sentiment metrics for individual investors trading in the Nepal Stock Exchange.',
+      problemSolved: 'Solved the lack of accessible, consolidated technical indicator charts and fundamental stock screening for individual investors trading in the Nepal Stock Exchange.',
+      isPrimaryFeatured: false,
       tags: ['React', 'TypeScript', 'Tailwind', 'Python'],
-      github: 'https://github.com/thedipeshdkl/-NoirLink-Traderchang', live: null,
+      github: 'https://github.com/thedipeshdkl/-NoirLink-Traderchang', live: null, caseStudyUrl: null,
       image: 'images/noirlink-banner.jpg',
       highlights: [
         'NEPSE Market Sentiment & Index Charts',
@@ -104,8 +108,10 @@ const DATA = {
       id: 'file-integrity', title: 'File Integrity System', subtitle: 'Cybersecurity Tool',
       category: 'Cybersecurity', desc: 'File integrity & authenticity verification system to detect tampering and protect data integrity.',
       detail: 'This cryptographic security utility monitors designated filesystem directories and computes SHA-256/SHA-512 hashes to detect file modification, corruption, or unauthorized tampering, generating audit logs for review.',
+      problemSolved: 'Mitigated the risk of unauthorized data tampering by providing continuous cryptographic hash monitoring and automated alerting for critical filesystems.',
+      isPrimaryFeatured: false,
       tags: ['Python', 'Hashing', 'Tkinter', 'Security'],
-      github: 'https://github.com/thedipeshdkl/File-Integrity-Authenticity-Verification-System', live: null,
+      github: 'https://github.com/thedipeshdkl/File-Integrity-Authenticity-Verification-System', live: null, caseStudyUrl: null,
       image: 'images/file-integrity-banner.jpg',
       highlights: [
         'Continuous SHA-256 & SHA-512 Hash Monitoring',
@@ -117,8 +123,10 @@ const DATA = {
       id: 'news-crawler', title: 'News Crawler', subtitle: 'Web Scraping & Data Extraction',
       category: 'Automation', desc: 'Automated news crawling & data extraction system for collecting and processing online news.',
       detail: 'News Crawler extracts news articles, headlines, publication dates, and body text from online news sources. It cleans raw HTML, removes duplicates, and exports structured datasets.',
+      problemSolved: 'Overcame the inefficiency of manual news gathering by building a highly concurrent engine that automatically scrapes, cleans, and de-duplicates online news data.',
+      isPrimaryFeatured: false,
       tags: ['Python', 'Scrapy', 'BeautifulSoup', 'CSV'],
-      github: 'https://github.com/thedipeshdkl/news_crawler', live: null,
+      github: 'https://github.com/thedipeshdkl/news_crawler', live: null, caseStudyUrl: null,
       image: 'images/news-crawler-banner.jpg',
       highlights: [
         'Multi-Threaded Asynchronous Web Scraping Engine',
@@ -259,28 +267,21 @@ function scrollToId(id) {
   window.addEventListener('resize', resize);
 })();
 
-/* ============================= ROTATING ROLE ============================= */
-(function rotatingRole() {
-  const el = $('#rotating-role');
-  let index = 0, deleting = false, text = '';
-  const current = () => DATA.roles[index % DATA.roles.length];
+// Bind new Hero buttons
+const viewProjectsBtn = $('#view-projects-btn');
+if (viewProjectsBtn) {
+  viewProjectsBtn.addEventListener('click', () => scrollToId('projects'));
+}
 
-  setInterval(() => {
-    const target = current();
-    if (!deleting && text === target) {
-      deleting = true;
-      setTimeout(() => {}, 0);
-      return;
-    }
-    if (deleting && text === '') {
-      deleting = false;
-      index++;
-      return;
-    }
-    text = deleting ? target.slice(0, text.length - 1) : target.slice(0, text.length + 1);
-    el.textContent = text;
-  }, deleting ? 40 : 90);
-})();
+const contactMeBtn = $('#contact-me-btn');
+if (contactMeBtn) {
+  contactMeBtn.addEventListener('click', () => scrollToId('contact'));
+}
+
+const downloadCvBtn = $('#download-cv-btn');
+if (downloadCvBtn) {
+  downloadCvBtn.addEventListener('click', openResume);
+}
 
 /* ============================= RENDER SECTIONS ============================= */
 function renderStats() {
@@ -311,15 +312,85 @@ function renderSkills() {
 }
 
 function renderProjects() {
-  $('#projects-grid').innerHTML = DATA.projects.map((p, i) =>
-    '<button class="project-card" data-project="' + i + '">' +
-    '<img src="' + p.image + '" alt="' + p.title + '" />' +
-    '<div class="project-body"><span class="project-cat">' + p.category + '</span>' +
-    '<h3>' + p.title + '</h3><p class="project-sub">' + p.subtitle + '</p>' +
-    '<p class="project-desc">' + p.desc + '</p>' +
-    '<div class="tags">' + p.tags.map((t) => '<span class="tag">' + t + '</span>').join('') + '</div>' +
-    '</div></button>'
-  ).join('');
+  const featured = DATA.projects.find(p => p.isPrimaryFeatured);
+  const others = DATA.projects.filter(p => !p.isPrimaryFeatured);
+
+  let html = '';
+
+  if (featured) {
+    const buttons = `
+      <div class="project-links">
+        <a href="${featured.github}" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+        ${featured.live ? `<a href="${featured.live}" target="_blank" rel="noopener" class="btn-live">Live Demo</a>` : ''}
+        ${featured.caseStudyUrl ? `<a href="${featured.caseStudyUrl}" target="_blank" rel="noopener" class="btn-case">Case Study</a>` : ''}
+      </div>
+    `;
+    const featuresList = featured.highlights.map(f => `<li>${f}</li>`).join('');
+    
+    html += `
+      <div class="featured-project">
+        <div class="fp-image">
+          <img src="${featured.image}" alt="${featured.title}" />
+          <span class="fp-badge">Featured Project</span>
+        </div>
+        <div class="fp-content">
+          <h3>${featured.title}</h3>
+          <p class="fp-sub">${featured.subtitle}</p>
+          <p class="fp-desc">${featured.desc}</p>
+          <div class="fp-problem">
+            <strong>Problem Solved:</strong>
+            <p>${featured.problemSolved}</p>
+          </div>
+          <div class="fp-features">
+            <strong>Key Features:</strong>
+            <ul>${featuresList}</ul>
+          </div>
+          <div class="tags">
+            ${featured.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+          </div>
+          ${buttons}
+        </div>
+      </div>
+    `;
+  }
+
+  if (others.length > 0) {
+    html += '<div class="projects-grid-inner">';
+    html += others.map(p => {
+      const buttons = `
+        <div class="project-links">
+          <a href="${p.github}" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+          ${p.live ? `<a href="${p.live}" target="_blank" rel="noopener" class="btn-live">Live Demo</a>` : ''}
+          ${p.caseStudyUrl ? `<a href="${p.caseStudyUrl}" target="_blank" rel="noopener" class="btn-case">Case Study</a>` : ''}
+        </div>
+      `;
+      const featuresList = p.highlights.slice(0, 3).map(f => `<li>${f}</li>`).join('');
+      return `
+        <div class="project-card-new">
+          <div class="project-body">
+            <h3>${p.title}</h3>
+            <p class="project-sub">${p.subtitle}</p>
+            <p class="project-desc">${p.desc}</p>
+            <div class="project-problem">
+              <strong>Problem Solved:</strong>
+              <p>${p.problemSolved}</p>
+            </div>
+            <div class="project-features">
+              <strong>Key Features:</strong>
+              <ul>${featuresList}</ul>
+            </div>
+            <div class="tags">
+              ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+            </div>
+            ${buttons}
+          </div>
+        </div>
+      `;
+    }).join('');
+    html += '</div>';
+  }
+
+  $('#projects-grid').innerHTML = html;
 }
 
 function renderEducation() {
@@ -422,11 +493,6 @@ function openProject(idx) {
   $('#project-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
-
-$('#projects-grid').addEventListener('click', (e) => {
-  const card = e.target.closest('[data-project]');
-  if (card) openProject(Number(card.dataset.project));
-});
 
 $('#close-project').addEventListener('click', () => {
   $('#project-modal').classList.remove('open');
